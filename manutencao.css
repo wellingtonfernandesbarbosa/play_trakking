@@ -1,0 +1,134 @@
+/* =========================
+   RESET E VARIÁVEIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde-play: #1b2b1b;
+  --branco: #ffffff;
+  --cinza-claro: #e5e5e5;
+}
+
+/* =========================
+   BASE MOBILE FIRST
+========================= */
+
+body {
+  min-height: 100vh;
+  background-color: var(--verde-play);
+  color: var(--branco);
+
+  font-family: "GFS Didot", serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+
+  /* Flexbox em coluna */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================
+   LOGO E ANIMAÇÃO
+========================= */
+
+.logo-wrapper {
+  margin-bottom: 32px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 160px;
+  max-width: 100%;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--cinza-claro);
+  max-width: 36ch;
+}
+
+/* =========================
+   BREAKPOINTS (UP)
+========================= */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: 640px;
+    padding: 32px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
